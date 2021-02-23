@@ -1,24 +1,60 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column         | Type   | Options     |
+| ----------     | ------ | ----------- |
+| nickname       | string | null: false |
+| email          | string | null: false |
+| password       | string | null: false |
+| full name      | string | null: false |
+| full name KANA | string | null: false |
+| birthday       | string | null: false |
 
-Things you may want to cover:
+### Association
 
-* Ruby version
+- has_many :products
+- has_many :purchase
+- has_one :address
 
-* System dependencies
 
-* Configuration
+## products テーブル
 
-* Database creation
+| Column      | Type       | Options     |
+| ----------  | ---------- | ----------- |
+| name        | string     | null: false |
+| description | text       | null: false |
+| price       | integer    | null: false |
+| image       |            |             |
+| user        | references |             |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :user
+- has_one :purchases
+- has_many :addresses
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## purchases テーブル
 
-* ...
+| Column | Type       | Options |
+| ------ | ---------- | ------- |
+| user   | references |         |
+| name   | references |         |
+
+### Association
+
+- belongs_to :user
+- belongs_to :product
+- has_one :address
+
+
+## addresses テーブル
+
+| Column  | Type   | Options     |
+| ------- | ------ | ----------- |
+| address | string | null: false |
+
+### Association
+
+- belongs_to :user
+- belongs_to :product
+- belongs_to :purchase
