@@ -5,10 +5,10 @@
 | nickname           | string | null: false               |
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false               |
-| first name         | string | null: false               |
-| last name          | string | null: false               |
-| first name KANA    | string | null: false               |
-| last name KANA     | string | null: false               |
+| first_name         | string | null: false               |
+| last_name          | string | null: false               |
+| first_name_kana    | string | null: false               |
+| last_name_kana     | string | null: false               |
 | birthday           | date   | null: false               |
 
 ### Association
@@ -19,14 +19,17 @@
 
 ## products テーブル
 
-| Column      | Type       | Options           |
-| ----------  | ---------- | ----------------- |
-| name        | string     | null: false       |
-| description | text       | null: false       |
-| price       | integer    | null: false       |
-| fee         | integer    |                   |
-| profit      | integer    |                   |
-| user        | references | foreign_key: true |
+| Column           | Type       | Options           |
+| ---------------- | ---------- | ----------------- |
+| name             | string     | null: false       |
+| description      | text       | null: false       |
+| category         | integer    | null: false       |
+| condition        | integer    | null: false       |
+| shipping_charges | integer    | null: false       |
+| prefecture       | integer    | null: false       |
+| shipping_days    | integer    | null: false       |
+| price            | integer    | null: false       |
+| user             | references | foreign_key: true |
 
 ### Association
 
@@ -36,10 +39,10 @@
 
 ## purchases テーブル
 
-| Column | Type       | Options           |
-| ------ | ---------- | ----------------- |
-| user   | references | foreign_key: true |
-| name   | references | foreign_key: true |
+| Column  | Type       | Options           |
+| ------- | ---------- | ----------------- |
+| user    | references | foreign_key: true |
+| product | references | foreign_key: true |
 
 ### Association
 
@@ -50,9 +53,15 @@
 
 ## addresses テーブル
 
-| Column  | Type   | Options     |
-| ------- | ------ | ----------- |
-| address | string | null: false |
+| Column        | Type       | Options           |
+| ------------- | ---------- | ----------------- |
+| postal_code   | string     | null: false       |
+| prefecture    | integer    | null: false       |
+| municipality  | string     | null: false       |
+| address       | string     | null: false       |
+| building_name | string     |                   |
+| phone_number  | integer    | null: false       |
+| purchase      | references | foreign_key: true |
 
 ### Association
 
