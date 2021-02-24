@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2021-02-24T02:53:14.746Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" etag="M7rcZ88fOjTSWuaghqyS" version="14.2.4" type="embed">
+<mxfile host="65bd71144e" modified="2021-02-24T03:23:07.934Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" etag="IENX_3Syqbt1BHOmjzg8" version="14.2.4" type="embed">
     <diagram id="HJyicEi9HMhD_rTyd6mE" name="ページ1">
         <mxGraphModel dx="1180" dy="603" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
@@ -25,7 +25,7 @@
                 <mxCell id="21" value="description(text型, NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="19" vertex="1">
                     <mxGeometry y="56" width="290" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="category(integer型, NOT NULL)&#10;&#10;condition(integer型, NOT NULL)&#10;&#10;shipping_charges(integer型, NOT NULL)&#10;&#10;prefectures(integer型, NOT NULL)&#10;&#10;shipping_days(integer型, NOT NULL)&#10;&#10;price(integer型, NOT NULL)&#10;&#10;image(ActiveStorageで実装)&#10;&#10;user(references型)&#10;" style="text;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;strokeColor=#f0f0f0;" parent="19" vertex="1">
+                <mxCell id="22" value="category_id(integer型, NOT NULL)&#10;&#10;condition_id(integer型, NOT NULL)&#10;&#10;shipping_charges_id(integer型, NOT NULL)&#10;&#10;prefectures_id(integer型, NOT NULL)&#10;&#10;shipping_days_id(integer型, NOT NULL)&#10;&#10;price(integer型, NOT NULL)&#10;&#10;image(ActiveStorageで実装)&#10;&#10;user(references型)&#10;" style="text;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;strokeColor=#f0f0f0;" parent="19" vertex="1">
                     <mxGeometry y="86" width="290" height="224" as="geometry"/>
                 </mxCell>
                 <mxCell id="24" value="purchasesテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
@@ -37,7 +37,7 @@
                 <mxCell id="43" value="addressesテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="670" y="450" width="289" height="230" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="postal_code(string型, NOT NULL)&#10;&#10;prefecture(integer型, NOT NULL)&#10;&#10;municipality(string型, NOT NULL)&#10;&#10;address(string型, NOT NULL)&#10;&#10;building_name(string型)&#10;&#10;phone_number(integer型, NOT NULL)&#10;&#10;purchase(references型)&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="43" vertex="1">
+                <mxCell id="44" value="postal_code(string型, NOT NULL)&#10;&#10;prefecture_id(integer型, NOT NULL)&#10;&#10;municipality(string型, NOT NULL)&#10;&#10;address(string型, NOT NULL)&#10;&#10;building_name(string型)&#10;&#10;phone_number(string型, NOT NULL)&#10;&#10;purchase(references型)&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="43" vertex="1">
                     <mxGeometry y="26" width="289" height="204" as="geometry"/>
                 </mxCell>
                 <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;" parent="1" edge="1">
