@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
   validates :nickname, presence: true
-  validates :password, format: { with: VALID_PASSWORD_REGEX}
+  validates :password, format: { with: VALID_PASSWORD_REGEX }
   with_options presence: true, format: { with: /\A[ぁ-ゔァ-ヴ\p{Ideographic}ａ-ｚＡ-Ｚ０-９]+\z/ } do
     validates :last_name
     validates :first_name
