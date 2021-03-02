@@ -25,9 +25,9 @@
 | description         | text       | null: false       |
 | category_id         | integer    | null: false       |
 | condition_id        | integer    | null: false       |
-| shipping_charge_id | integer    | null: false       |
+| shipping_charge_id  | integer    | null: false       |
 | prefecture_id       | integer    | null: false       |
-| shipping_day_id    | integer    | null: false       |
+| shipping_day_id     | integer    | null: false       |
 | price               | integer    | null: false       |
 | user                | references | foreign_key: true |
 
@@ -42,7 +42,7 @@
 | Column  | Type       | Options           |
 | ------- | ---------- | ----------------- |
 | user    | references | foreign_key: true |
-| item | references | foreign_key: true |
+| item    | references | foreign_key: true |
 
 ### Association
 
@@ -60,7 +60,7 @@
 | municipality  | string     | null: false       |
 | address       | string     | null: false       |
 | building_name | string     |                   |
-| phone_number  | string    | null: false       |
+| phone_number  | string     | null: false       |
 | purchase      | references | foreign_key: true |
 
 ### Association
