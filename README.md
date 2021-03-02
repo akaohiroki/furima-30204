@@ -13,11 +13,11 @@
 
 ### Association
 
-- has_many :products
+- has_many :items
 - has_many :purchases
 
 
-## products テーブル
+## items テーブル
 
 | Column              | Type       | Options           |
 | ------------------- | ---------- | ----------------- |
@@ -25,9 +25,9 @@
 | description         | text       | null: false       |
 | category_id         | integer    | null: false       |
 | condition_id        | integer    | null: false       |
-| shipping_charges_id | integer    | null: false       |
+| shipping_charge_id | integer    | null: false       |
 | prefecture_id       | integer    | null: false       |
-| shipping_days_id    | integer    | null: false       |
+| shipping_day_id    | integer    | null: false       |
 | price               | integer    | null: false       |
 | user                | references | foreign_key: true |
 
@@ -42,12 +42,12 @@
 | Column  | Type       | Options           |
 | ------- | ---------- | ----------------- |
 | user    | references | foreign_key: true |
-| product | references | foreign_key: true |
+| item | references | foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :product
+- belongs_to :item
 - has_one :address
 
 
